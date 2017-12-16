@@ -9,38 +9,44 @@ body {
 
 header {
     width: 100%;
-    height: auto;    
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
     background-color: rgb(220, 20, 60);
     background-size: cover;
 }
 
 .logo {
-    background-color: black;
-    width: 20%;
-    height: 80px;
+    padding: 30px 125px 30px 125px;
+    background-image: url(../imagem/doe-roupas-logo-dark.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-nav {
-    padding: 0 10% 0 10%;    
-    width: 80%;
-    height: 100px;
+nav ul {
+    padding: 50px 17%;    
     background-color: rgb(190, 3, 41);
     box-shadow: 0 0 0 1px rgb(148, 2, 33);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-family: Muli;
     color: #ffffff;    
 }
 
-nav li {
+nav ul li {
     list-style: none;
 }
 
-nav li:hover {
-    border-bottom: 1px solid #ffffff;
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 25px #555;
+    padding: 15px 60px;
+    border-radius: 25px;
+}
+nav ul li a:hover {
+    box-shadow: 0 0 50px #555;
 }
 
 .title {
@@ -156,23 +162,61 @@ nav li:hover {
 .help h3 {
     margin-bottom: 20px;
 }
+.help a {
+    text-decoration: none;
+    color: #333;
+}
+
+#footer-widgets {
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-widgets .container {
+    width: 70%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 70px 0;
+}
+#footer-widgets .container .widget {
+    margin: 15px;
+    font-size: 19px;
+    line-height: 37px;
+}
+#footer-widgets .container .widget ul li {
+    list-style: none;
+}
+#footer-widgets .container .widget ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 
+}
+#footer-widgets .container .widget01 a {
+    background-image: url(../imagem/doe-roupas-logo-dark.png);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15px 75px 15px 75px;
+}
+#footer-widgets .container .widget01 a span {
+    visibility: hidden;
+}    
+#footer-widgets .container .widget02 {
+    
+}    
+
 
 footer {
-    width: 100%;
-    height: 400px;
     background-color: #3d3d3d;
     font-family: Muli;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding: 0 0 10px 0;
+    align-items: center;
+    padding: 15px;
 }
-
-footer hr {
-    width: 70%;
-    margin: 0 15% 0 15%;
-}
-
 footer a {
     color: #ffffff;
     text-decoration: none;
@@ -189,11 +233,15 @@ footer a {
 }
 
 @media (max-width: 550px) {
-    nav li {
-        display: none;
+    .nav ul {
+        flex-direction: column;
     }
 
     .logo {
         min-width: 100px;
+    }
+
+    #footer-widgets .container {
+        flex-direction: column;
     }
 }
